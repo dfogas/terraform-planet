@@ -1,0 +1,21 @@
+{
+  "inline-diffs": true,
+  "exit": true,
+  "reporter": "spec",
+  "extension": [
+    "ts"
+  ],
+  "require": [
+    "chai/register-expect",
+    "ts-node/register"
+  ],
+  "opts": false,
+  "ui": "bdd",
+  "watch-files": [
+      "domain/**/*.spec.ts"
+  ],
+  "spec": [
+    "test/init.ts",
+    "specs/*.spec.ts"
+  ]
+}
