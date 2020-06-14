@@ -4,7 +4,7 @@ var chai_1 = require("chai");
 var planet_board_reducer_1 = require("../domain/reducers/planet-board.reducer");
 var immutable_1 = require("immutable");
 var basic_planet_1 = require("../domain/maps/basic-planet");
-describe.only('Planet Board reducer', function () {
+describe('Planet Board reducer', function () {
     describe('when place tile action', function () {
         it('should place tile', function () {
             var tileBeingPlaced = {

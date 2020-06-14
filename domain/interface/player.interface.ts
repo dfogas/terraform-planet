@@ -1,4 +1,4 @@
-import {PlayerMarker} from "../representation/player-marker";
+import {PlayerMarker} from "./player.marker.interface";
 import {Company} from "./company.interface";
 import {Project} from "./project.interface";
 import {PlayerBoard} from "./player.board.interface";

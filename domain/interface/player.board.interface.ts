@@ -1,4 +1,4 @@
-import {Resource} from "./resource.interface";
+import {Resource} from "./player.resource.interface";
 
 export interface PlayerBoard {
     resources: Array<Resource>;

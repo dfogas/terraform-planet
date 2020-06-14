@@ -1,4 +1,4 @@
-import {PlayerMarker} from "../representation/player-marker";
+import {PlayerMarker} from "./player.marker.interface";
 
 export interface Tile {
     type: string;

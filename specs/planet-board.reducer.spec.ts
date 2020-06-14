@@ -5,7 +5,7 @@ import {planetBoard} from "../domain/reducers/planet-board.reducer";
 import {Map} from 'immutable';
 import {BasicPlanet} from "../domain/maps/basic-planet";
 
-describe.only('Planet Board reducer', () => {
+describe('Planet Board reducer', () => {
 
     describe('when place tile action', () => {
 
