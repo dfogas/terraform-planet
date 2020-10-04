@@ -1,36 +1,36 @@
 import {ProjectDeck} from "../../domain/globals/projects/project-deck";
-import {RESOURCES} from "../../domain/constants/resources";
+import {R} from "../../domain/constants/r";
 
 export function getTestPlayer(color) {
     const defaultPlayerBoard = {
         resources: [
             {
-                name: RESOURCES.credits,
+                name: R.credits,
                 stock: 30,
                 production: 0
             },
             {
-                name: RESOURCES.steel,
+                name: R.steel,
                 stock: 0,
                 production: 0
             },
             {
-                name: RESOURCES.titanium,
+                name: R.titanium,
                 stock: 0,
                 production: 0
             },
             {
-                name: RESOURCES.plants,
+                name: R.plants,
                 stock: 0,
                 production: 0
             },
             {
-                name: RESOURCES.energy,
+                name: R.energy,
                 stock: 0,
                 production: 0
             },
             {
-                name: RESOURCES.heat,
+                name: R.heat,
                 stock: 0,
                 production: 0
             }

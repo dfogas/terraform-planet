@@ -23,7 +23,7 @@ var immutable_1 = require("immutable");
 var project_deck_1 = require("../domain/globals/projects/project-deck");
 var chai_1 = require("chai");
 var get_test_player_1 = require("./helpers/get-test-player");
-var resources_1 = require("../domain/constants/resources");
+var resources_1 = require("../domain/constants/r");
 describe('Players Reducer', function () {
     var initialState = immutable_1.List.of();
     describe('when called for the first time with no discernible action', function () {
@@ -181,7 +181,7 @@ describe('Players Reducer', function () {
             };
             var state = immutable_1.List.of(player);
             var resourceStockAfterChange = player.board.resources[0].stock + action.data.projects.length;
-            chai_1.expect(findResourceStock(resources_1.RESOURCES.credits, action, state))
+            chai_1.expect(findResourceStock(resources_1.R.credits, action, state))
                 .to.equal(resourceStockAfterChange);
         });
     });
@@ -226,11 +226,11 @@ describe('Players Reducer', function () {
                 }
             };
             var state = immutable_1.List.of(player);
-            chai_1.expect(players_reducer_1.players(action, state).toJS()[0].board.resources.find(function (resource) { return resource.name === resources_1.RESOURCES.credits; }).stock)
-                .to.equal(player.board.resources.find(function (resource) { return resource.name === resources_1.RESOURCES.credits; }).stock - project.cost);
+            chai_1.expect(players_reducer_1.players(action, state).toJS()[0].board.resources.find(function (resource) { return resource.name === resources_1.R.credits; }).stock)
+                .to.equal(player.board.resources.find(function (resource) { return resource.name === resources_1.R.credits; }).stock - project.cost);
         });
     });
 });
 function findResourceStock(resourceName, action, state) {
-    return players_reducer_1.players(action, state).toJS()[0].board.resources.find(function (resource) { return resource.name === resources_1.RESOURCES.credits; }).stock;
+    return players_reducer_1.players(action, state).toJS()[0].board.resources.find(function (resource) { return resource.name === resources_1.R.credits; }).stock;
 }

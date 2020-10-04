@@ -1,37 +1,37 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var project_deck_1 = require("../../domain/globals/projects/project-deck");
-var resources_1 = require("../../domain/constants/resources");
+var r_1 = require("../../domain/constants/r");
 function getTestPlayer(color) {
     var defaultPlayerBoard = {
         resources: [
             {
-                name: resources_1.RESOURCES.credits,
+                name: r_1.R.credits,
                 stock: 30,
                 production: 0
             },
             {
-                name: resources_1.RESOURCES.steel,
+                name: r_1.R.steel,
                 stock: 0,
                 production: 0
             },
             {
-                name: resources_1.RESOURCES.titanium,
+                name: r_1.R.titanium,
                 stock: 0,
                 production: 0
             },
             {
-                name: resources_1.RESOURCES.plants,
+                name: r_1.R.plants,
                 stock: 0,
                 production: 0
             },
             {
-                name: resources_1.RESOURCES.energy,
+                name: r_1.R.energy,
                 stock: 0,
                 production: 0
             },
             {
-                name: resources_1.RESOURCES.heat,
+                name: r_1.R.heat,
                 stock: 0,
                 production: 0
             }

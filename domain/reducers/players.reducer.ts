@@ -2,7 +2,7 @@ import * as Immutable from "immutable";
 import {List} from "immutable";
 import {Player} from "../interface/player.interface";
 import {concat, difference} from 'ramda';
-import {RESOURCES} from "../constants/resources";
+import {R} from "../constants/r";
 
 export function players(action: any, state: Immutable.List<Player> = List.of()) {
 
@@ -34,7 +34,7 @@ function buildProject(action, state) {
             0,
             'board',
             'resources',
-            findPlayer(action, state).getIn([0, 'board', 'resources']).findIndex((resource) => resource.name === RESOURCES.credits), 'stock'
+            findPlayer(action, state).getIn([0, 'board', 'resources']).findIndex((resource) => resource.name === R.credits), 'stock'
         ], (val) => val - action.data.project.cost);
 }
 

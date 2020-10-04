@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var immutable_1 = require("immutable");
 var ramda_1 = require("ramda");
-var resources_1 = require("../constants/resources");
+var r_1 = require("../constants/r");
 function players(action, state) {
     if (state === void 0) { state = immutable_1.List.of(); }
     switch (action.name) {
@@ -33,7 +33,7 @@ function buildProject(action, state) {
         0,
         'board',
         'resources',
-        findPlayer(action, state).getIn([0, 'board', 'resources']).findIndex(function (resource) { return resource.name === resources_1.RESOURCES.credits; }), 'stock'
+        findPlayer(action, state).getIn([0, 'board', 'resources']).findIndex(function (resource) { return resource.name === r_1.R.credits; }), 'stock'
     ], function (val) { return val - action.data.project.cost; });
 }
 function accessPlayerHand(action, state) {

@@ -4,7 +4,7 @@ import {ProjectDeck} from "../domain/globals/projects/project-deck";
 import {Player} from "../domain/interface/player.interface";
 import {expect} from 'chai';
 import {getTestPlayer} from "./helpers/get-test-player";
-import {RESOURCES} from "../domain/constants/resources";
+import {R} from "../domain/constants/r";
 import {Action} from "../domain/interface/action.interface";
 
 describe('Players Reducer', () => {
@@ -195,7 +195,7 @@ describe('Players Reducer', () => {
             const state = List.of(player);
             const resourceStockAfterChange = player.board.resources[0].stock + action.data.projects.length;
 
-            expect(findResourceStock(RESOURCES.credits, action, state))
+            expect(findResourceStock(R.credits, action, state))
                 .to.equal(resourceStockAfterChange);
         });
     });
@@ -247,12 +247,12 @@ describe('Players Reducer', () => {
             };
             const state = List.of(player);
 
-            expect(players(action, state).toJS()[0].board.resources.find((resource) => resource.name === RESOURCES.credits).stock)
-                .to.equal(player.board.resources.find((resource) => resource.name === RESOURCES.credits).stock - project.cost);
+            expect(players(action, state).toJS()[0].board.resources.find((resource) => resource.name === R.credits).stock)
+                .to.equal(player.board.resources.find((resource) => resource.name === R.credits).stock - project.cost);
         });
     });
 });
 
 function findResourceStock(resourceName: string, action, state) {
-    return players(action, state).toJS()[0].board.resources.find((resource) => resource.name === RESOURCES.credits).stock;
+    return players(action, state).toJS()[0].board.resources.find((resource) => resource.name === R.credits).stock;
 }
